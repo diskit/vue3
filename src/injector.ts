@@ -1,4 +1,4 @@
-import { inject, InjectionKey, provide, reactive } from "vue";
+import { inject, InjectionKey, provide, reactive } from '@vue/composition-api';
 import TodoUsecase from "./usecase/todo-usecase";
 import TaskStorage from "./driver/task-storage";
 import TodoState from "./views/state/todo-state";

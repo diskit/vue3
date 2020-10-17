@@ -1,5 +1,10 @@
-import { createApp } from "vue";
+import Vue from 'vue'
+import VueCompositionAPI from '@vue/composition-api'
 import App from "./App.vue";
 
-const app = createApp(App);
-app.mount("#app");
+Vue.use(VueCompositionAPI)
+new Vue({
+  render: h => h(App)
+}).$mount("#app");
+// const app = createApp(App);
+// app.mount("#app");

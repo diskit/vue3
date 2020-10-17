@@ -4,8 +4,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, onMounted } from 'vue';
+import { defineComponent, inject, onMounted } from '@vue/composition-api'
+// import { defineComponent, inject, onMounted } from 'vue';
 import { Keys } from '@/injector';
+import ToddoUsecase from '@/usecase/todo-usecase';
 
 export default defineComponent({
   name: 'todo-list',
@@ -13,7 +15,7 @@ export default defineComponent({
   },
   setup() {
     const state = inject(Keys.TodoStateKey);
-    const usecase = inject(Keys.TodoUsecaseKey)!!;
+    const usecase = inject<ToddoUsecase>(Keys.TodoUsecaseKey)!!;
     onMounted(() => {usecase.get()});
     return { 
       state,

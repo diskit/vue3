@@ -6,7 +6,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from '@vue/composition-api'
+// import { defineComponent } from "vue";
 import Injector from './injector';
 import TodoList from '@/views/components/pages/TodoList.vue';
 
